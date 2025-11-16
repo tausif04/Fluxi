@@ -20,7 +20,7 @@ Loops:
 
 repeat N begin … stop
 
-forstep begin … until(condition) stop
+forstep begin … until(condition) stop  / run(condition) begin ..... stop ------->here run means (reapeat until)
 
 Supports arithmetic, relational, and logical expressions
 
