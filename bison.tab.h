@@ -47,16 +47,17 @@
      PLUS = 263,
      SEMICOLON = 264,
      QUOTE = 265,
-     show = 266,
-     EQUAL = 267,
-     MINUS = 268,
-     MULTIPLY = 269,
-     DIVISION = 270,
-     LEFTPAREN = 271,
-     RIGHTPAREN = 272,
-     INT = 273,
-     FLOAT = 274,
-     CHAR = 275
+     MAKE = 266,
+     show = 267,
+     EQUAL = 268,
+     MINUS = 269,
+     MULTIPLY = 270,
+     DIVISION = 271,
+     LEFTPAREN = 272,
+     RIGHTPAREN = 273,
+     INT = 274,
+     FLOAT = 275,
+     CHAR = 276
    };
 #endif
 
@@ -76,7 +77,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 80 "bison.tab.h"
+#line 81 "bison.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

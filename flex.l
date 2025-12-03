@@ -18,13 +18,14 @@
 [0-9]*\.[0-9]+ {yylval.real=atof(yytext); return FRACTION;}
 [0-9]+ { yylval.num=atoi(yytext); return NUMBER; } // convert string to int
 
-
+make {return MAKE;}
 num {return INT;}
 real {return FLOAT;}
 text {return CHAR;}/* [a-zA-Z]+ {yylval.text=yytext; return CHARACTER;} */
 
 
 [a-z_A-Z_][a-z_A-Z0-9]* {yylval.text=strdup(yytext);return NAME;}
+
 
 \" {return QUOTE;}
 ";" {return SEMICOLON;}

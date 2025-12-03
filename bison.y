@@ -24,6 +24,7 @@ extern FILE *yyin;
 %token PLUS
 %token SEMICOLON
 %token QUOTE
+%token MAKE
 
 %type <num> exp
 %type <real> exp2
@@ -53,11 +54,11 @@ input:
 ;
 
 line:
-    INT NAME EQUAL exp SEMICOLON EOL {printf("%d is the value \n",$4);}
-|   INT NAME EQUAL exp SEMICOLON {printf("%d is the value\n",$4);}
-|   FLOAT NAME EQUAL exp2 SEMICOLON {printf("%f is the value\n",$4);}
-|   FLOAT NAME EQUAL exp2 SEMICOLON EOL {printf("%f is the value\n",$4);}
-|   CHAR NAME EQUAL QUOTE NAME QUOTE SEMICOLON {printf("%s is the value \n",$5)}
+    MAKE INT NAME EQUAL exp SEMICOLON EOL {printf("%d is the value \n",$5);}
+|   MAKE INT NAME EQUAL exp SEMICOLON {printf("%d is the value\n",$5);}
+|   MAKE FLOAT NAME EQUAL exp2 SEMICOLON {printf("%f is the value\n",$5);}
+|   MAKE FLOAT NAME EQUAL exp2 SEMICOLON EOL {printf("%f is the value\n",$5);}
+|   MAKE CHAR NAME EQUAL QUOTE NAME QUOTE SEMICOLON {printf("%s is the value \n",$6)}
 |   EOL {}
 ;
 
