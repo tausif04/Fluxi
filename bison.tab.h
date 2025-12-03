@@ -41,12 +41,22 @@
    enum yytokentype {
      EOL = 258,
      NUMBER = 259,
-     PLUS = 260,
-     MINUS = 261,
-     MULTIPLY = 262,
-     DIVISION = 263,
-     LEFTPAREN = 264,
-     RIGHTPAREN = 265
+     CHARACTER = 260,
+     FRACTION = 261,
+     NAME = 262,
+     PLUS = 263,
+     SEMICOLON = 264,
+     QUOTE = 265,
+     show = 266,
+     EQUAL = 267,
+     MINUS = 268,
+     MULTIPLY = 269,
+     DIVISION = 270,
+     LEFTPAREN = 271,
+     RIGHTPAREN = 272,
+     INT = 273,
+     FLOAT = 274,
+     CHAR = 275
    };
 #endif
 
@@ -57,14 +67,16 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 10 "bison.y"
+#line 12 "bison.y"
 
     int num;
+    float real;
+    char* text;
 
 
 
 /* Line 1676 of yacc.c  */
-#line 68 "bison.tab.h"
+#line 80 "bison.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
