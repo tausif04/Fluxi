@@ -1,3 +1,0 @@
-make real ddd = 3.5;
-make num DDD = 100;
-make text s = "ishtiaque";
