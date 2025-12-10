@@ -1,0 +1,7 @@
+::make real ddd = 3.5;
+make num DDD = 100;
+make text s = "ishtiaque";
+show (ddd);
+take real a;
+show (a);
+show(tausif);
