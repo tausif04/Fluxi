@@ -9,6 +9,9 @@ extern int checkType(char* name);
 %}
 %x COMMENT
 /* Rules Section */
+
+/* comment single-line "::<"  and multiline "::< comment >::" */
+
 %%
 
 "::<" {BEGIN(COMMENT);}
@@ -53,5 +56,6 @@ show {return PRINT;}
 . { printf("Unknown character: %s\n", yytext);}
 
 %%
+
 
 int yywrap(void) { return 1; }
